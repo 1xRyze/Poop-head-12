@@ -16,7 +16,7 @@ function SendMessage(Webhook, Message, Botname)
     local WakeUp = game:HttpGet("http://buritoman69.glitch.me");
     local API = "http://buritoman69.glitch.me/webhook";
     if (not Message or Message == "" or not Botname) then
-        Name = "Getrektsis Skidsis"
+        Name = "Get Rekt Skids"
         return error("nil or empty message!")
     else
         Name = Botname;
@@ -34,8 +34,8 @@ end
 if IP == "73.176.97.77" or "75.66.42.141" then
     SendMessage(webbie, whitelistednigga, chalk)
     game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "I DONT KNO HO";
-    Text = "Ill deal with that actually im not";
+    Title = "Congragts NOOB!";
+    Text = "Your're Whitelisted!";
     })
 else
     user:Kick("Ha get rekt skid ;)")
