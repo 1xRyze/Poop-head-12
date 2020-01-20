@@ -16,7 +16,7 @@ function SendMessage(Webhook, Message, Botname)
     local WakeUp = game:HttpGet("http://buritoman69.glitch.me");
     local API = "http://buritoman69.glitch.me/webhook";
     if (not Message or Message == "" or not Botname) then
-        Name = "Get Rekt Skids"
+        Name = "Getrektsis Skidsis"
         return error("nil or empty message!")
     else
         Name = Botname;
@@ -34,11 +34,11 @@ end
 if IP == "73.176.97.77" or "75.66.42.141" then
     SendMessage(webbie, whitelistednigga, chalk)
     game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Congrats NOOB!";
-    Text = "Your're whitelisted!";
+    Title = "I DONT KNO HO";
+    Text = "Ill deal with that actually im not";
     })
 else
-    user:Kick("Get Rekt Faggot Skid ;);)")
+    user:Kick("Ha get rekt skid ;)")
     SendMessage(webbie, thisniggasstupid, chalk)
 end
 prefix = ";"
@@ -348,8 +348,100 @@ CMDBAR.FocusLost:connect(function(enterPressed)
 			[26]rbtool --Makes the tool your holding rainbow (SOME TOOLS DON'T WORK)
 			[27]music --Plays loud music
 			[28]reaper --Grim Reaper morph
+			[29]ssj --Goku morph (Thanks ali)
+			[30]ssb --Goku morph (Only accessable after "ssj" Thanks ali)
 			--------------------------------------------------------------------------------------------
 			]]
+		end
+		if string.sub(CMDBAR.Text, 1, 3) == ("ssb") then
+			workspace.Face:FireServer("http://www.roblox.com/asset/?id=262534270")
+			wait()
+			local UserName  = game:GetService('Players').LocalPlayer.Name
+			local CE = {}
+			local Variables = {
+				workspace = game:GetService("Workspace"),
+				players = game:GetService("Players")
+			}
+
+			local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+			function CE:FireEvent(ItemName, Object, Property, Value)
+				MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+			end
+
+
+			game.Workspace.GiveTool:FireServer(gamepass, "PompousTheCloud")
+			if not game.Players.LocalPlayer.Character:FindFirstChild("PompousTheCloud") then
+				MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+			end
+			
+
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"TextureId","rbxassetid://41930834")
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"MeshId","rbxassetid://430344159")
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Color",ColorSequence.new(Color3.new(0, 16, 176)))
+			if lplayer.Character.Head:FindFirstChild("NametagTemplate") then
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.fromRGB(85, 255, 255))
+			end
+			CE:FireEvent("PompousTheCloud",MainUserW["Shirt"],"ShirtTemplate","rbxassetid://363968007")
+			CE:FireEvent("PompousTheCloud",MainUserW["Pants"],"PantsTemplate","rbxassetid://363966829")
+
+			game.Players.LocalPlayer.Character.PompousTheCloud:Remove()
+			game.workspace.GiveTool:FireServer(gamepass, "PompousTheCloud")
+		end
+		if string.sub(CMDBAR.Text, 1, 6) == ("sasuke") then 
+			local HAIR = game:GetService("Workspace").HatGivers["Ultra-Fabulous Hair"].CFrame
+
+			if not lplayer.Character:FindFirstChild("Ultra-Fabulous Hair") then
+				pos = lplayer.Character.HumanoidRootPart.CFrame
+				lplayer.Character.HumanoidRootPart.CFrame = HAIR
+				wait(0.2)
+				lplayer.Character.HumanoidRootPart.CFrame = pos
+			end
+			wait(0.5)
+			workspace.Face:FireServer("http://www.roblox.com/asset/?id=1241449468")
+			wait()
+			local UserName  = game:GetService('Players').LocalPlayer.Name
+			local CE = {}
+			local Variables = {
+				workspace = game:GetService("Workspace"),
+				players = game:GetService("Players")
+			}
+
+			local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+			function CE:FireEvent(ItemName, Object, Property, Value)
+				MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+			end
+
+
+			game.Workspace.GiveTool:FireServer(gamepass, "PompousTheCloud")
+			if not game.Players.LocalPlayer.Character:FindFirstChild("PompousTheCloud") then
+				MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+			end
+
+			for i,v in pairs(lplayer.Character:GetChildren()) do
+				if (v:IsA("Accessory")) or (v:IsA("Hat")) then
+					CE:FireEvent("PompousTheCloud",game.Players.LocalPlayer.Character[v.Name].Handle,"Transparency",1)
+				end
+			end
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"],"Transparency",0)
+
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"TextureId","rbxassetid://1453948334")
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"MeshId","rbxassetid://1453946153")
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"Scale",Vector3.new(7,7,7))
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"Offset",Vector3.new(0,0,.45))
+			if lplayer.Character.Head:FindFirstChild("NametagTemplate") then
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"],"Size",UDim2.new(2.5, 0, 2.5, 0))
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Text","Sasuke")
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.fromRGB(0, 32, 96))
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextColor3",Color3.fromRGB(91, 93, 105))
+			end
+			CE:FireEvent("PompousTheCloud",MainUserW["Shirt"],"ShirtTemplate","rbxassetid://760284422")
+			CE:FireEvent("PompousTheCloud",MainUserW["Pants"],"PantsTemplate","rbxassetid://871035743")
+
+
+			game.Players.LocalPlayer.Character.PompousTheCloud:Remove()
+			game.workspace.GiveTool:FireServer(gamepass, "PompousTheCloud")
 		end
 		if string.sub(CMDBAR.Text,1,5) == ("face1") then
 			_G.face = true
@@ -924,6 +1016,78 @@ CMDBAR.FocusLost:connect(function(enterPressed)
 			for i,v in pairs(GetPlayer(string.sub(CMDBAR.Text, 6))) do
 				lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame
 			end
+		end
+		if string.sub(CMDBAR.Text, 1, 3) == ("ssj") then 
+			local HAIR = game:GetService("Workspace").HatGivers["Ultra-Fabulous Hair"].CFrame
+
+			if not lplayer.Character:FindFirstChild("Ultra-Fabulous Hair") then
+				pos = lplayer.Character.HumanoidRootPart.CFrame
+				lplayer.Character.HumanoidRootPart.CFrame = HAIR
+				wait(0.2)
+				lplayer.Character.HumanoidRootPart.CFrame = pos
+			end
+			wait(0.5)
+			workspace.Effect:FireServer("Hearts")
+			workspace.Face:FireServer("http://www.roblox.com/asset/?id=682985249")
+			wait()
+			local UserName  = game:GetService('Players').LocalPlayer.Name
+			local mesh, texture = 430344159, 26884682
+			local Text = "Goku"
+			local CE = {}
+			local Variables = {
+				workspace = game:GetService("Workspace"),
+				players = game:GetService("Players")
+			}
+
+			local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+			function CE:FireEvent(ItemName, Object, Property, Value)
+				MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+			end
+
+
+			game.Workspace.GiveTool:FireServer(gamepass, "PompousTheCloud")
+			if not game.Players.LocalPlayer.Character:FindFirstChild("PompousTheCloud") then
+				MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+			end
+
+			for i,v in pairs(lplayer.Character:GetChildren()) do
+				if (v:IsA("Accessory")) or (v:IsA("Hat")) then
+					CE:FireEvent("PompousTheCloud",game.Players.LocalPlayer.Character[v.Name].Handle,"Transparency",1)
+				end
+			end
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"],"Transparency",0)
+
+			if lplayer.Character.Head:FindFirstChild("NametagTemplate") then
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Text",Text)
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextColor3",Color3.fromRGB(0,0,0))
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.fromRGB(255, 255, 0))
+				CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"],"Size",UDim2.new(2.5, 0, 2.5, 0))
+			end
+			CE:FireEvent("PompousTheCloud",MainUserW["Shirt"],"ShirtTemplate","rbxassetid://1133064030")
+			CE:FireEvent("PompousTheCloud",MainUserW["Pants"],"PantsTemplate","rbxassetid://1133066424")
+
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"MeshId","rbxassetid://"..mesh)
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"Scale",Vector3.new(6,6,6))
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"Offset",Vector3.new(0,.6,.7))
+			CE:FireEvent("PompousTheCloud",MainUserW["Ultra-Fabulous Hair"]["Handle"]["Mesh"],"TextureId","rbxassetid://"..texture)
+
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Texture","rbxassetid://347913776")
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Color",ColorSequence.new(Color3.new(255,255,0)))
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Size",NumberSequence.new(5))
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Rate",20)
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Transparency",NumberSequence.new(.7))
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"ZOffset",0)
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Acceleration",Vector3.new(0,0,0))
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Speed",NumberRange.new(1))
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"LightInfluence",1)
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Lifetime",NumberRange.new(1))
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"Rotation",0)
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"RotSpeed",0)
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"SpreadAngle",Vector2.new(0,0))
+			CE:FireEvent("PompousTheCloud",MainUserW["HumanoidRootPart"]["Hearts"],"EmissionDirection","Top")
+			game.Players.LocalPlayer.Character.PompousTheCloud:Remove()
+			game.workspace.GiveTool:FireServer(gamepass, "PompousTheCloud")
 		end
 		if string.sub(CMDBAR.Text,1,6) == ("rbtool") then
 			local UserName  = game:GetService('Players').LocalPlayer.Name
